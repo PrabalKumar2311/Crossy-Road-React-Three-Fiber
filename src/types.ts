@@ -9,8 +9,8 @@ export type Row =
 }
 | {
   type: "car";
-  direction: "boolean";
-  speed: "number";
+  direction: boolean;
+  speed: number;
   vehicles: {
     initialIndex: number;
     color: THREE.ColorRepresentation;
@@ -18,8 +18,8 @@ export type Row =
 }
 | {
   type: "truck";
-  direction: "boolean";
-  speed: "number";
+  direction: boolean;
+  speed: number;
   vehicles: {
     initialIndex: number;
     color: THREE.ColorRepresentation;
