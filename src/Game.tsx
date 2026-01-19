@@ -8,9 +8,9 @@ function Game() {
   return (
       <Scene>
            <OrbitControls
-  enableRotate={false}
+  enableRotate={true}
   enablePan={false}
-  enableZoom={true}
+  enableZoom={false}
 />
 
         <Player/>
