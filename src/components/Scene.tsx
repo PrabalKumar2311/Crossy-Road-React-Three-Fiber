@@ -1,4 +1,4 @@
-import { OrbitControls } from '@react-three/drei'
+import { OrbitControls, Environment } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Children } from 'react'
 import  DirectionalLight  from './DirectionalLight'
@@ -13,8 +13,9 @@ export const Scene = ({ children } : { children: React.ReactNode }) => {
     }}
     shadows={true}
     >
-      <ambientLight/>
+      <ambientLight intensity={1}/>
       <DirectionalLight />
+      <Environment preset="city" />
       {children}
     </Canvas>
     </>

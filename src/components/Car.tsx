@@ -28,11 +28,11 @@ export function Car({
       rotation-z={direction ? 0 : Math.PI}
       ref={car}
     >
-      <mesh position={[0, 0, 12]}>f
+      <mesh position={[0, 0, 12]} castShadow>
         <boxGeometry args={[60, 30, 15]} />
         <meshLambertMaterial color={color} flatShading />
       </mesh>
-      <mesh position={[-6, 0, 25.5]}>
+      <mesh position={[-6, 0, 25.5]} castShadow>
         <boxGeometry args={[33, 24, 12]} />
         <meshLambertMaterial color={0xffffff} flatShading />
       </mesh>

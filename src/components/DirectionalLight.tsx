@@ -1,7 +1,7 @@
 export default function DirectionalLight(){
   return(
     <directionalLight
-    position={[-100, -100, 200]}
+    position={[-100, 0, 200]}
     up={[0,0,1]}
     castShadow
     shadow-mapSize={[2048, 2048]}

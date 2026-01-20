@@ -11,12 +11,12 @@ export const rows: Row[] = [
   },
   {type: "car",
     direction: false,
-    speed: 1,
+    speed: 200,
     vehicles: [{initialIndex: 2, color: 0xff0000}]
   },
   {type: "truck",
-    direction: true,
-    speed: 0,
+    direction: true, 
+    speed: 100,
     vehicles: [{initialIndex: -4, color: 0x00ff00}]
   }
 ];

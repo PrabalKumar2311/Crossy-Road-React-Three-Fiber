@@ -1,6 +1,6 @@
 import { rows } from '../metadata';
 import { Grass } from './Grass';
-import Row from './Row';
+import Row from './Row.tsx';
 
 function Map() {
   return (
