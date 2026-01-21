@@ -1,11 +1,13 @@
-import { OrbitControls, Environment } from '@react-three/drei'
+import {Environment } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Children, Suspense } from 'react'
-import  DirectionalLight  from './DirectionalLight'
 import Loader from './Loader'
-        import { RoundedBox } from "@react-three/drei";
 
-export const Scene = ({ children } : { children: React.ReactNode }) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+export const Scene = ({ children }: Props) => {
   return (
     <>
     <Canvas orthographic={true} 
@@ -17,12 +19,10 @@ export const Scene = ({ children } : { children: React.ReactNode }) => {
     shadows={true}
     >
       <ambientLight intensity={1}/>
-      <DirectionalLight />
       <Environment preset="city" />
-
-      <Suspense fallback={<Loader />}>
+      {/* <Suspense fallback={<Loader />}> */}
         {children}
-      </Suspense>
+      {/* </Suspense> */}
     </Canvas>
     </>
   )
