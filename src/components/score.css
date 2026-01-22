@@ -5,11 +5,21 @@
 
   font-size: 2em;
   color: white;
-
-  /* fake border using shadows */
   text-shadow:
     -4px -4px 0 #000,
      4px -4px 0 #000,
     -4px  4px 0 #000,
      4px  4px 0 #000;
+}
+
+
+#top-score {
+  font-size: 20px;
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+  margin-top: 10px;
+  opacity: 0.9;
 }
