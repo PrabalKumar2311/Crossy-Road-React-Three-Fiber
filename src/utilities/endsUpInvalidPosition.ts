@@ -2,6 +2,7 @@ import type { MoveDirection } from "../types";
 import { calculateFinalPosition } from "./calculateFinalPosition";
 import { minTileIndex, maxTileIndex, minBackwardRow } from "../constants";
 import { rows } from "../metadata";
+import useMapStore from "../store/map";
 
 export function endsUpInvalidPosition(
   currentPosition: { rowIndex: number; tileIndex: number },
@@ -16,7 +17,7 @@ export function endsUpInvalidPosition(
     return false
   }
 
-  const finalRow = rows[finalPosition.rowIndex - 1];
+  const finalRow = useMapStore.getState().rows[finalPosition.rowIndex - 1];
   if ( finalRow && 
     finalRow.type === "forest" &&
     finalRow.trees.some((tree) => tree.tileIndex === 

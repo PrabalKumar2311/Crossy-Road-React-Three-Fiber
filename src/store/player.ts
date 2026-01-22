@@ -1,5 +1,6 @@
 import { endsUpInvalidPosition } from "../utilities/endsUpInvalidPosition";
 import type { MoveDirection } from "../types";
+import useMapStore from "./map";
 
 export const state: {
   currentRow: number;
@@ -30,4 +31,8 @@ export function stepCompleted(){
   if(direction === 'backward') state.currentRow -= 1;
   if(direction === 'left') state.currentTile -= 1;
   if(direction === 'right') state.currentTile += 1;
+
+  if(state.currentRow === useMapStore.getState().rows.length - 10){
+    useMapStore.getState().addRows();
+  }
 }

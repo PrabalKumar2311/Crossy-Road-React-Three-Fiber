@@ -1,8 +1,12 @@
 import { rows } from '../metadata';
 import { Grass } from './Grass';
 import Row from './Row.tsx';
+import useStore from '../store/map';
 
 function Map() {
+
+  const rows = useStore((state) => state.rows);
+
   return (
     <>
       <Grass rowIndex={0} />
