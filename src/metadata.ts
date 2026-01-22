@@ -16,7 +16,7 @@ export const rows: Row[] = [
   },
   {type: "truck",
     direction: true, 
-    speed: 0,
+    speed: 50,
     vehicles: [{initialIndex: -3, color: 0x00ff00}]
   }
 ];

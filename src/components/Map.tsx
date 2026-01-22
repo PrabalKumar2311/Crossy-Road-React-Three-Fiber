@@ -21,8 +21,6 @@ function Map() {
       <Grass rowIndex={-8} />
       <Grass rowIndex={-9} />
 
-      <Rock rowIndex={50} />
-
 
       {rows.map((rowData, index) => (
         <Row key={index} rowIndex={index + 1} rowData={rowData} />

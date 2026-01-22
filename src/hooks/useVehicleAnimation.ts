@@ -15,10 +15,10 @@ export default function useVehicleAnimation(
     const endOfRow = (maxTileIndex + 2) * tileSize;
 
     if(direction){
-      vehicle.position.x = vehicle.position.x > endOfRow ? beginningOfRow : vehicle.position.x + speed * delta;
+      vehicle.position.x = vehicle.position.x > endOfRow ? beginningOfRow : vehicle.position.x + speed * (delta/1.9);
     }
     else{
-      vehicle.position.x = vehicle.position.x < beginningOfRow ? endOfRow : vehicle.position.x - speed * delta;
+      vehicle.position.x = vehicle.position.x < beginningOfRow ? endOfRow : vehicle.position.x - speed * (delta/1.9);
     }
   })
 }

@@ -4,7 +4,7 @@ import { minTileIndex, maxTileIndex, minBackwardRow } from "../constants";
 import { rows } from "../metadata";
 import useMapStore from "../store/map";
 
-export function endsUpInvalidPosition(
+export default function endsUpInvalidPosition(
   currentPosition: { rowIndex: number; tileIndex: number },
   moves: MoveDirection[]
 ) {

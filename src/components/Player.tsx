@@ -4,6 +4,8 @@ import { Bounds } from "@react-three/drei";
 import { useEffect, useRef } from "react";
 import usePlayerAnimation from "../hooks/usePlayerAnimation";
 import DirectionalLight from "./DirectionalLight";
+import { setRef } from "../store/player";
+import { Truck } from "./Truck";
 
 function Player() {
   const player = useRef<THREE.Group>(null);
@@ -18,10 +20,15 @@ function Player() {
 
     player.current.add(camera);
     lightRef.current.target = player.current;
+    setRef(player.current);
   });
 
   return (
     <Bounds fit clip observe margin={10}>
+
+      {/* <Truck rowIndex={10} initialTileIndex={10} direction={false} speed={0} color={"pink"}/> */}
+
+
       <group ref={player}>
         <group>
           {/* Main body */}

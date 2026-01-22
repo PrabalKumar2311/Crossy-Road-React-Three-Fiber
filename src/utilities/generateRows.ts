@@ -31,7 +31,7 @@ function generateForesMetadata(): Row {
     } while (occupiedTiles.has(tileIndex));
     occupiedTiles.add(tileIndex);
 
-    const height = randomElement([20, 45, 60, 90, 23, 45, 54]);
+    const height = randomElement([20, 45, 60, 40, 23, 45, 54]);
 
     return { tileIndex, height };
   });

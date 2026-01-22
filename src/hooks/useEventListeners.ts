@@ -1,8 +1,15 @@
 import { useEffect } from 'react';
 import { queueMove } from '../store/player';
+import useGameStore from "../store/game";
 
 export default function useEventListeners(){
+
+  const status = useGameStore((state) => state.status);
+
   useEffect(() => {
+
+    if (status === "over") return; 
+    
     const handleKeyDown = (event: KeyboardEvent) => {
       if(event.key === "ArrowUp"){
         event.preventDefault();
@@ -27,5 +34,5 @@ export default function useEventListeners(){
     return () => {
       window.removeEventListener("keydown", handleKeyDown)
     }
-  }, [])
+  }, [status])
 }
