@@ -14,7 +14,6 @@ export default function Scene({ children }: Props) {
       <ambientLight intensity={1} />
       <Environment preset="city" />
 
-      {/* Camera MUST be inside Canvas */}
       <ResponsiveCamera />
 
       <Suspense fallback={<Loader />}>

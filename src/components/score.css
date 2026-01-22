@@ -1,0 +1,15 @@
+#score {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  font-size: 2em;
+  color: white;
+
+  /* fake border using shadows */
+  text-shadow:
+    -4px -4px 0 #000,
+     4px -4px 0 #000,
+    -4px  4px 0 #000,
+     4px  4px 0 #000;
+}

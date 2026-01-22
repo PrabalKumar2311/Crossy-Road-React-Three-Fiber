@@ -2,6 +2,7 @@ import { rows } from '../metadata';
 import { Grass } from './Grass';
 import Row from './Row.tsx';
 import useStore from '../store/map';
+import Rock from './Rock.tsx';
 
 function Map() {
 
@@ -19,6 +20,9 @@ function Map() {
       <Grass rowIndex={-7} />
       <Grass rowIndex={-8} />
       <Grass rowIndex={-9} />
+
+      <Rock rowIndex={50} />
+
 
       {rows.map((rowData, index) => (
         <Row key={index} rowIndex={index + 1} rowData={rowData} />

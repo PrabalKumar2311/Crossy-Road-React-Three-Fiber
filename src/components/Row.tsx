@@ -1,3 +1,4 @@
+// Row.tsx
 import type { Row } from '../types';
 import Forest from './Forest';
 import CarLane from './CarLane';
