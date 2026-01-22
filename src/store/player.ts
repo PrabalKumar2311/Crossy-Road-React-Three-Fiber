@@ -1,4 +1,4 @@
-import { endsUpInvalidPosition } from "../endsUpInvalidPosition";
+import { endsUpInvalidPosition } from "../utilities/endsUpInvalidPosition";
 import type { MoveDirection } from "../types";
 
 export const state: {

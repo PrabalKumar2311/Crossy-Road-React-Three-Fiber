@@ -1,4 +1,4 @@
-import type { MoveDirection } from "./types";
+import type { MoveDirection } from "../types";
 
 export function calculateFinalPosition(
   currentPosition: { rowIndex: number; tileIndex: number },

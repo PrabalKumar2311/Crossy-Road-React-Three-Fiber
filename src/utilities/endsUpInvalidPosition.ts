@@ -1,7 +1,7 @@
-import type { MoveDirection } from "./types";
+import type { MoveDirection } from "../types";
 import { calculateFinalPosition } from "./calculateFinalPosition";
-import { minTileIndex, maxTileIndex, minBackwardRow } from "./constants";
-import { rows } from "./metadata";
+import { minTileIndex, maxTileIndex, minBackwardRow } from "../constants";
+import { rows } from "../metadata";
 
 export function endsUpInvalidPosition(
   currentPosition: { rowIndex: number; tileIndex: number },
