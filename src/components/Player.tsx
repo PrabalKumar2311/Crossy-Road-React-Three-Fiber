@@ -74,7 +74,7 @@ function Player() {
             castShadow
             receiveShadow
           >
-            <planeGeometry args={[1, 1]} />
+            <planeGeometry args={[1.5, 1.5]} />
             <meshLambertMaterial color="black" flatShading />
           </mesh>
 

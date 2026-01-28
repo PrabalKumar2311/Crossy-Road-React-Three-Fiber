@@ -23,6 +23,7 @@ export function Car({
   const car = useRef<THREE.Group>(null);
   useVehicleAnimation(car, direction, speed);
   useHitDetection(car, rowIndex);
+  const darkColor = new THREE.Color(color).multiplyScalar(0.4);
   
   return (
     <group
@@ -31,19 +32,46 @@ export function Car({
       ref={car}
     >
       {/* Main body */}
-      <mesh position={[0, 0, 12]} castShadow>
-        <boxGeometry args={[60, 30, 15]} />
+      <mesh position={[0, 0, 14]} castShadow>
+        <boxGeometry args={[60, 30, 10]} />
         <meshLambertMaterial color={color} flatShading />
       </mesh>
 
+      <mesh rotation={[0, Math.PI / 2, 0]} position={[30.01, 0, 14]}>
+        <planeGeometry args={[5, 10]} />
+        <meshMatcapMaterial color={darkColor} flatShading />
+      </mesh>
+
+      {/* Textures */}
+      <mesh rotation={[0, 0, Math.PI / 2]} position={[21, 0, 19.01]}>
+        <planeGeometry args={[14, 18]} />
+        <meshMatcapMaterial color={darkColor} flatShading />
+      </mesh>
+
+      <mesh rotation={[0, 0, Math.PI / 2]} position={[-24, 0, 19.01]}>
+        <planeGeometry args={[14, 12]} />
+        <meshMatcapMaterial color={darkColor} flatShading />
+      </mesh>
+
+      <mesh position={[0, 0, 7]} castShadow>
+        <boxGeometry args={[60, 30, 4]} />
+        <meshLambertMaterial color={0x7f8aa6} flatShading />
+      </mesh>
+
+      {/* Spoiler */}
+      <mesh position={[-28, 0, 21]} castShadow>
+        <boxGeometry args={[4, 14, 4]} />
+        <meshLambertMaterial color={darkColor} flatShading />
+      </mesh>
+
       {/* Roof */}
-      <mesh position={[-6, 0, 24.5]} castShadow>
-        <boxGeometry args={[33, 24, 10]} />
+      <mesh position={[-3, 0, 24.5]} castShadow>
+        <boxGeometry args={[30, 24, 12]} />
         <meshLambertMaterial color={0xffffff} flatShading />
       </mesh>
 
       {/* Lights */}
-      <mesh rotation={[0, Math.PI / 2, 0]} position={[30.1, 10, 15]}>
+      <mesh rotation={[0, Math.PI / 2, 0]} position={[30.1, 10, 14]}>
         <planeGeometry args={[4, 4]} />
         <meshLambertMaterial
           color="white"
@@ -51,12 +79,76 @@ export function Car({
         />
       </mesh>
 
-      <mesh rotation={[0, Math.PI / 2, 0]} position={[30.1, -10, 15]}>
+      <mesh rotation={[0, Math.PI / 2, 0]} position={[30.1, -10, 14]}>
         <planeGeometry args={[4, 4]} />
         <meshLambertMaterial
           color="white"
           flatShading
         />
+      </mesh>
+
+      {/* Back lights */}
+      <mesh rotation={[0, -Math.PI / 2, 0]} position={[-30.05, 0, 11]}>
+        <planeGeometry args={[4, 18]} />
+        <meshMatcapMaterial color="#875555" flatShading />
+      </mesh>
+
+      {/* Windows */}
+      {/* Front */}
+      <mesh rotation={[0, Math.PI / 2, 0]} position={[12.05, 0, 23]}>
+        <planeGeometry args={[8, 18]} />
+        <meshMatcapMaterial color="black" flatShading />
+      </mesh>
+
+      {/* Right back */}
+      <mesh rotation={[Math.PI/2,0, 0]} position={[-13, -12.01, 23]}>
+        <planeGeometry args={[4, 8]} />
+        <meshMatcapMaterial color="black" flatShading />
+      </mesh>
+
+      {/* Right front */}
+      <mesh rotation={[Math.PI/2,0, 0]} position={[0, -12.01, 23]}>
+        <planeGeometry args={[18, 8]} />
+        <meshMatcapMaterial color="black" flatShading />
+      </mesh>
+
+      {/* Left back */}
+      <mesh rotation={[ -Math.PI/2,0, 0]} position={[-13, 12.01, 23]}>
+        <planeGeometry args={[4, 8]} />
+        <meshMatcapMaterial color="black" flatShading />
+      </mesh>
+
+      {/* Left front */}
+      <mesh rotation={[ -Math.PI/2,0, 0]} position={[0, 12.01, 23]}>
+        <planeGeometry args={[18, 8]} />
+        <meshMatcapMaterial color="black" flatShading />
+      </mesh>
+
+      <mesh rotation={[0, -Math.PI / 2, 0]} position={[-18.05, 0, 23]}>
+        <planeGeometry args={[8, 18]} />
+        <meshMatcapMaterial color="black" flatShading />
+      </mesh>
+
+      {/* Rear view mirrors */}
+      <mesh position={[10.5, 14, 22]} >
+        <boxGeometry args={[3, 4, 6]} />
+        <meshMatcapMaterial color={darkColor}  />
+      </mesh>
+
+      <mesh position={[10.5, -14, 22]} >
+        <boxGeometry args={[3, 4, 6]} />
+        <meshMatcapMaterial color={darkColor} />
+      </mesh>
+
+      {/* Tapes */}
+      <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, -15.01, 10.5]}>
+        <planeGeometry args={[60, 3]} />
+        <meshMatcapMaterial color={darkColor} flatShading />
+      </mesh>
+
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 15.01, 10.5]}>
+        <planeGeometry args={[60, 3]} />
+        <meshMatcapMaterial color={darkColor} flatShading />
       </mesh>
 
       <Wheel x={-18} />
