@@ -9,23 +9,29 @@ export default function usePlayerAnimation(
   const moveClock = new THREE.Clock(false);
 
   useFrame(() => {
-    if(!ref.current) return;
-    if(!state.movesQueue.length) return;
-    const player = ref.current;
+  if (!ref.current) return;
+  if (!state.movesQueue.length) return;
 
-    if(!moveClock.running) moveClock.start();
+  const player = ref.current;
 
-    const stepTime = 0.2;
-    const progress = Math.min(1, moveClock.getElapsedTime() / stepTime)
+  if (!moveClock.running) {
+  moveClock.start();
+  state.isMoving = true;
+}
 
-    setPosition(player, progress)
-    setRotation(player, progress)
+  const stepTime = 0.2;
+  const progress = Math.min(1, moveClock.getElapsedTime() / stepTime);
 
-    if(progress >= 1){
-      stepCompleted();
-      moveClock.stop();
-    }
-  })
+  setPosition(player, progress);
+  setRotation(player, progress);
+
+  if (progress >= 1) {
+  stepCompleted();
+  moveClock.stop();
+  state.isMoving = false;
+}
+});
+
 }
 
 function setPosition(player: THREE.Group, progress: number){

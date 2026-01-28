@@ -26,3 +26,8 @@
 #controls button:first-of-type {
   grid-column: 1/-1;
 }
+
+button:active {
+    transform: translate(1px, 2px);
+    box-shadow: 2px 3px 0px 0px rgba(0,0,0,1);
+  }

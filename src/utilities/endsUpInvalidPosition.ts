@@ -1,7 +1,6 @@
 import type { MoveDirection } from "../types";
 import { calculateFinalPosition } from "./calculateFinalPosition";
 import { minTileIndex, maxTileIndex, minBackwardRow } from "../constants";
-import { rows } from "../metadata";
 import useMapStore from "../store/map";
 
 export default function endsUpInvalidPosition(

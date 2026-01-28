@@ -5,6 +5,7 @@ import useMapStore from "./map";
 import useGameStore from "./game";
 
 export const state: {
+  isMoving: boolean;
   currentRow: number;
   currentTile: number;
   movesQueue: MoveDirection[];
@@ -14,9 +15,13 @@ export const state: {
   currentTile: 0,
   movesQueue: [],
   ref: null,
+  isMoving: false,
 };
 
 export function queueMove(direction: MoveDirection) {
+  // Allow only ONE buffered move while moving
+  if (state.isMoving && state.movesQueue.length > 0) return;
+
   const isValidMove = endsUpInValidPosition(
     { rowIndex: state.currentRow, tileIndex: state.currentTile },
     [...state.movesQueue, direction]
@@ -26,6 +31,7 @@ export function queueMove(direction: MoveDirection) {
 
   state.movesQueue.push(direction);
 }
+
 
 export function stepCompleted() {
   const direction = state.movesQueue.shift();
