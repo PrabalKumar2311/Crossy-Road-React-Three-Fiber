@@ -24,8 +24,20 @@ const useStore = create<StoreState>((set) => ({
   topScore: getInitialTopScore(),
 
   updateScore: (rowIndex: number) => {
-    set((state) => ({ score: Math.max(rowIndex, state.score) }));
-  },
+  set((state) => {
+    const newScore = Math.max(rowIndex, state.score);
+    const newTopScore = Math.max(newScore, state.topScore);
+
+    if (newTopScore !== state.topScore && typeof window !== "undefined") {
+      localStorage.setItem("topScore", newTopScore.toString());
+    }
+
+    return {
+      score: newScore,
+      topScore: newTopScore,
+    };
+  });
+},
 
   endGame: () => {
     set((state) => {

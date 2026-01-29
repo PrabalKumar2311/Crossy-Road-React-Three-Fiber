@@ -10,8 +10,8 @@ export default function endsUpInvalidPosition(
   const finalPosition = calculateFinalPosition(currentPosition, moves);
 
   if( finalPosition.rowIndex < minBackwardRow ||
-      finalPosition.tileIndex === minTileIndex - 1 ||
-      finalPosition.tileIndex === maxTileIndex + 1
+      finalPosition.tileIndex === minTileIndex + 6 ||
+      finalPosition.tileIndex === maxTileIndex - 5
   ){
     return false
   }

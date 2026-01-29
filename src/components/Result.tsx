@@ -16,8 +16,8 @@ export function Result() {
     <div id="result-container">
       <div id="result">
         <h1>Game Over</h1>
-        <p>Your score: {score}</p>
-        <p>Top score: {topScore}</p>
+        <p>Score: {score}</p>
+        <p>Highest score: {topScore}</p>
         <button onClick={() => {
           reset();
           resetPlayer();

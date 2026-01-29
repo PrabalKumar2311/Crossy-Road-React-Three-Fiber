@@ -1,12 +1,15 @@
 import { Html } from "@react-three/drei";
+import "./Loader.css";
 
 export default function Loader() {
-
-  console.log("suspense")
   return (
-    <Html center>
-      <h1 style={{ color: "black" }}>CROSSY</h1>
-      <h1 style={{ color: "white" }}>ROAD</h1>
+    <Html fullscreen>
+      <div id="loader">
+        <div id="loader-title">
+          CROSSY<br />
+          ROAD
+        </div>
+      </div>
     </Html>
   );
 }

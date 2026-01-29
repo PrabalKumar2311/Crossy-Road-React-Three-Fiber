@@ -1,8 +1,8 @@
 import { Environment } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import ResponsiveCamera from "./ResponsiveCamera";
 import { Suspense } from "react";
 import Loader from "./Loader";
-import ResponsiveCamera from "./ResponsiveCamera";
 
 type Props = {
   children: React.ReactNode;
@@ -11,12 +11,10 @@ type Props = {
 export default function Scene({ children }: Props) {
   return (
     <Canvas shadows>
+      <Suspense fallback={<Loader />}>
       <ambientLight intensity={1} />
       <Environment preset="city" />
-
       <ResponsiveCamera />
-
-      <Suspense fallback={<Loader />}>
         {children}
       </Suspense>
     </Canvas>
