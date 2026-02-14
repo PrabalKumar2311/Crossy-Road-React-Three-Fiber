@@ -10,7 +10,13 @@ type Props = {
 
 export default function Scene({ children }: Props) {
   return (
-    <Canvas shadows>
+    <Canvas shadows 
+    style={{
+      touchAction: 'none',
+      width: "100%",
+    height: "100%",
+    display: "block",
+    }}>
       <Suspense fallback={<Loader />}>
       <ambientLight intensity={1} />
       <Environment preset="city" />

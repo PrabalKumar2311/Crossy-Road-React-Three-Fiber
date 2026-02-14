@@ -4,6 +4,8 @@ import  endsUpInValidPosition  from "../utilities/endsUpInvalidPosition";
 import useMapStore from "./map";
 import useGameStore from "./game";
 
+// export let hasDispatchedFirstMove = false;
+
 export const state: {
   isMoving: boolean;
   currentRow: number;
@@ -30,6 +32,11 @@ export function queueMove(direction: MoveDirection) {
   if (!isValidMove) return;
 
   state.movesQueue.push(direction);
+
+  // if (!hasDispatchedFirstMove) {
+  //   hasDispatchedFirstMove = true;
+  //   window.dispatchEvent(new Event("player-first-move"));
+  // }
 }
 
 

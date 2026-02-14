@@ -1,10 +1,14 @@
 #loader {
   position: fixed;
-  inset: 0;
+  top: -60vh;
+  left: -60vw;
+  width: 120vw;
+  height: 120vh;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1e90ff;
+  background-color: rgb(108, 199, 232);
 }
 
 #loader-title {
