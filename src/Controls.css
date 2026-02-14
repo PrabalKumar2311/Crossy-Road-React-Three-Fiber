@@ -31,3 +31,19 @@ button:active {
     transform: translate(1px, 2px);
     box-shadow: 2px 3px 0px 0px rgba(0,0,0,1);
   }
+
+
+  #controls button.invalid {
+  background-color: #ff4d4d;
+  border: #ff4d4d;
+  animation: shake 0.2s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-5px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-5px); }
+  80% { transform: translateX(5px); }
+  100% { transform: translateX(0); }
+}

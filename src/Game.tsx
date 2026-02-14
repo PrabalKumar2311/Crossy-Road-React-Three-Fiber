@@ -37,8 +37,6 @@ function Game() {
 
   return (
     <div className="game">
-
-
         {/* {isMobile && !hasMoved && (
         <div className="mobile-info">
           <FaInfoCircle size={24} />

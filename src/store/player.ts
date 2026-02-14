@@ -29,7 +29,12 @@ export function queueMove(direction: MoveDirection) {
     [...state.movesQueue, direction]
   );
 
-  if (!isValidMove) return;
+  if (!isValidMove) {
+  window.dispatchEvent(
+    new CustomEvent("invalid-move", { detail: direction })
+  );
+  return;
+}
 
   state.movesQueue.push(direction);
 
