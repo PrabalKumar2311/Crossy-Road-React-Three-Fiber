@@ -6,8 +6,6 @@ import Controls from "./Controls";
 import "./Game.css";
 import Score from "./components/Score";
 import { Result } from "./components/Result";
-import { Suspense } from "react";
-import Loader from "./components/Loader";
 // import {useState, useEffect } from 'react'
 // import { FaInfoCircle } from "react-icons/fa";
 

@@ -5,7 +5,6 @@ import { useEffect, useRef } from "react";
 import usePlayerAnimation from "../hooks/usePlayerAnimation";
 import DirectionalLight from "./DirectionalLight";
 import { setRef } from "../store/player";
-import { Truck } from "./Truck";
 
 function Player() {
   const player = useRef<THREE.Group>(null);

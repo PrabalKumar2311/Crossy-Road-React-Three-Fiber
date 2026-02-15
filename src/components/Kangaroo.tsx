@@ -1,7 +1,3 @@
-import * as THREE from "three";
-import { useEffect, useRef } from "react";
-
-
 function Kangaroo() {
 
 const brown = "rgb(126,88,68)"
