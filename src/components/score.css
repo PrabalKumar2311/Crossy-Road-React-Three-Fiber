@@ -10,6 +10,10 @@
      4px -4px 0 #000,
     -4px  4px 0 #000,
      4px  4px 0 #000;
+
+     opacity: 0;
+  transform: translateY(5px);
+  animation: scoreFadeIn 0.5s ease-out forwards;
 }
 
 
@@ -22,4 +26,15 @@
      2px  2px 0 #000;
   margin-top: 10px;
   opacity: 0.9;
+
+  opacity: 0;
+  transform: translateY(5px);
+  animation: scoreFadeIn 0.5s ease-out forwards;
+}
+
+@keyframes scoreFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
