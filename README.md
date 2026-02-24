@@ -29,6 +29,8 @@ This project explores 3D web graphics, game logic, and interactive rendering dir
 
 ## 📸 Preview
 
+https://prabal-crossy-road-game.netlify.app/
+
 <img width="1440" height="809" alt="Crossy Road Screenshot" src="https://github.com/user-attachments/assets/65603d7a-3a62-44c6-83b1-52769700bf03" />
 
 ---
