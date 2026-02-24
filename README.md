@@ -23,7 +23,7 @@ This project explores 3D web graphics, game logic, and interactive rendering dir
 * **React Three Fiber**
 * **Three.js**
 * **@react-three/drei**
-* JavaScript / ES6+
+* TypeScript / ES6+
 
 ---
 
