@@ -1,9 +1,9 @@
 import * as THREE from "three";
 import { minTileIndex, maxTileIndex } from "../constants";
-import { type Row, type RowType } from "../types";
+import { type RowData, type RowType } from "../types";
 
-export function generateRows(amount: number): Row[] {
-  const rows: Row[] = [];
+export function generateRows(amount: number): RowData[] {
+  const rows: RowData[] = [];
   for (let i = 0; i < amount; i++) {
     const rowData = generateRow();
     rows.push(rowData);
@@ -11,7 +11,7 @@ export function generateRows(amount: number): Row[] {
   return rows;
 }
 
-function generateRow(): Row {
+function generateRow(): RowData {
   const type: RowType = randomElement(["car", "truck", "forest"]);
   if (type === "car") return generateCarLaneMetadata();
   if (type === "truck") return generateTruckLaneMetadata();
@@ -22,7 +22,7 @@ function randomElement<T>(array: T[]): T {
   return array[Math.floor(Math.random() * array.length)];
 }
 
-function generateForesMetadata(): Row {
+function generateForesMetadata(): RowData {
   const occupiedTiles = new Set<number>();
   const trees = Array.from({ length: 8 }, () => {
     let tileIndex;
@@ -39,7 +39,7 @@ function generateForesMetadata(): Row {
   return { type: "forest", trees };
 }
 
-function generateCarLaneMetadata(): Row {
+function generateCarLaneMetadata(): RowData {
   const direction = randomElement([true, false]);
   const speed = randomElement([125, 156, 188]);
 
@@ -76,7 +76,7 @@ function generateCarLaneMetadata(): Row {
 }
 
 
-function generateTruckLaneMetadata(): Row {
+function generateTruckLaneMetadata(): RowData {
   const direction = randomElement([true, false]);
   const speed = randomElement([125, 156, 188]);
 

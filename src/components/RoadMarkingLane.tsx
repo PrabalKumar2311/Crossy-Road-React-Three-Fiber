@@ -15,7 +15,6 @@ function RoadMarkingLane({ rowIndex, dashed = true }: Props) {
     const segments = [];
     const segmentLength = 5;
     const gapLength = 3;
-    const totalLength = 100;
     let position = -50; // Start at -50
     
     while (position < 50) {

@@ -1,9 +1,9 @@
 import { create } from "zustand";
 import { generateRows } from "../utilities/generateRows";
-import type { Row } from "../types";
+import type { RowData } from "../types";
 
 interface StoreState {
-  rows: Row[];
+  rows: RowData[];
   addRows: () => void;
   reset: () => void;
 }

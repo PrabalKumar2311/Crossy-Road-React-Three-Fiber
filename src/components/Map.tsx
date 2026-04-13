@@ -1,8 +1,6 @@
-import { rows } from '../metadata';
-import { Grass } from './Grass';
+import { Grass } from './Grass.tsx';
 import Row from './Row.tsx';
-import useStore from '../store/map';
-import Rock from './Rock.tsx';
+import useStore from '../store/map.ts';
 
 function Map() {
 

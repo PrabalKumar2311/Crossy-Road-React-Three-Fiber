@@ -1,10 +1,9 @@
 // Score.tsx
 import useStore from "../store/game";
-import "./Score.css";
+import "./score.css";
 
 export default function Score() {
   const score = useStore((state) => state.score);
-  const status = useStore((state) => state.status);
   const topScore = useStore((state) => state.topScore);
 
   return (

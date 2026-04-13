@@ -1,12 +1,12 @@
 // Row.tsx
-import type { Row } from '../types';
+import type { RowData } from '../types';
 import Forest from './Forest';
 import CarLane from './CarLane';
 import TruckLane from './TruckLane';
 
 type Props = {
   rowIndex: number;
-  rowData: Row;
+  rowData: RowData;
 };
 
 function Row({ rowIndex, rowData }: Props) {

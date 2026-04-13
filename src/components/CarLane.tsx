@@ -1,10 +1,10 @@
-import type { Row } from '../types'
+import type { RowData } from '../types'
 import  Road  from './Road';
 import { Car } from './Car';
 
 type Props = {
   rowIndex: number;
-  rowData: Extract<Row, {type: 'car'}>
+  rowData: Extract<RowData, {type: 'car'}>
 }
 
 function CarLane({rowIndex, rowData}: Props) {

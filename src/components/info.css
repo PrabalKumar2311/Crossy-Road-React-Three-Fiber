@@ -1,0 +1,137 @@
+/* WRAPPER (important for positioning) */
+#info-wrapper {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* INFO BUTTON */
+#info-btn {
+  font-size: 20px;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #fff;
+
+  /* 🔥 GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+#info-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* POPOVER (LEFT SIDE) */
+#info-popover {
+  position: absolute;
+  top: 0;
+  right: 45px;
+
+  padding: 12px 16px;
+  min-width: 120px;
+  border-radius: 16px;
+
+  /* 🔥 GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  color: #fff;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+  animation: fadeSlide 0.25s ease;
+}
+
+/* TEXT */
+.made-by {
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #aaa;
+  margin: 0;
+
+  /* 🔥 OUTLINE TEXT EFFECT */
+  text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+
+  /* subtle depth */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.made-by span {
+  font-size: 16px;
+  color: #fff;
+
+  /* 🔥 STRONGER OUTLINE */
+  text-shadow:
+    -2px -2px 0 #000,
+     2px -2px 0 #000,
+    -2px  2px 0 #000,
+     2px  2px 0 #000;
+
+  /* crisp edge */
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.6);
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,0.6);
+  margin: 10px 0;
+}
+
+/* SOCIALS */
+.socials {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.socials a {
+  font-size: 24px;
+  color: #ddd;
+
+  text-shadow:
+    0px -1px 0 #000,
+     0px -1px 0 #000,
+    0px  1px 0 #000,
+     0px  px 0 #000;
+
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+/* ANIMATION */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

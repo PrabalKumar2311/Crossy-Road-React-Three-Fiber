@@ -2,7 +2,7 @@ import * as THREE  from 'three';
 
 export type RowType = "forest" | "car" | "truck";
 
-export type Row = 
+export type RowData = 
 | {
   type: "forest";
   trees: {tileIndex: number; height: number}[];

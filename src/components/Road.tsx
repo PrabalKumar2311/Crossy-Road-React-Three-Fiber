@@ -1,4 +1,3 @@
-import { Children } from "react";
 import { tilesPerRow, tileSize } from "../constants"
 
 type Props = {

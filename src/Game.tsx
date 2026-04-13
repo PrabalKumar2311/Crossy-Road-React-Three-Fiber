@@ -5,6 +5,7 @@ import Map from "./components/Map";
 import Controls from "./Controls";
 import "./Game.css";
 import Score from "./components/Score";
+import Info from "./components/Info";
 import { Result } from "./components/Result";
 // import {useState, useEffect } from 'react'
 // import { FaInfoCircle } from "react-icons/fa";
@@ -48,7 +49,7 @@ function Game() {
         </Scene>
         <Score />
         <Controls />
-        {/* <Stats/> */}
+        <Info/>
         <Result />
     </div>
   );

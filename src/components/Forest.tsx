@@ -1,10 +1,10 @@
-import type { Row } from '../types';
+import type { RowData } from '../types';
 import { Grass } from './Grass'
 import  Tree  from './Tree';
 
 type Props = {
   rowIndex: number;
-  rowData: Extract<Row, {type: "forest"}>;
+  rowData: Extract<RowData, {type: "forest"}>;
 };
 
 function Forest({rowIndex, rowData}: Props) {

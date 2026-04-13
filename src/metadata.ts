@@ -1,6 +1,6 @@
-import type { Row } from './types';
+import type { RowData } from './types';
 
-export const rows: Row[] = [
+export const rows: RowData[] = [
   {type: "forest",
     trees: [
       {tileIndex: -3, height: 20},
